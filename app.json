@@ -1,0 +1,83 @@
+{
+  "expo": {
+    "name": "お弁当市場-デリバー用",
+    "slug": "itiba-deliver",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "android" : {
+      "package" : "com.itiba.deliver.jp",
+      "versionCode" : 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCRs2BvmDob55GFljgvZmIT-mAHN9isL4c"
+        }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [{
+            "scheme": "itibadeliver"
+          }],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "useNextNotificationsApi": true
+    },
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "itibadeliver",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.itiba.deliver.jp",
+      "buildNumber" : "3",
+      "config" : {
+        "googleMapsApiKey" : "AIzaSyDZsbBjjrxFvBPWX9Vjtj3kj1NcQm3Jt5g"
+      },
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ],
+        "NSUserNotificationAlertStyle" : "Notification",
+        "NSCameraUsageDescription" : "Camera Usage",
+        "NSPhotoLibraryUsageDescription" : "Photo Library Usage",
+        "NSLocationUsageDescription" : "Location for tracking",
+        "NSAllowsArbitraryLoads": true,
+        "CFBundleAllowMixedLocalizations" : true,
+        "CFBundleLocalizations" : ["ja"],
+        "CFBundleDevelopmentRegion" : "ja_JP"
+      }
+    },
+    "locales": {
+      "ja": "./japan.json"
+    },
+    "notification" : {
+      "icon": "./assets/images/push_icon.png"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "svg", "ts", "tsx"]
+    }
+  }
+}

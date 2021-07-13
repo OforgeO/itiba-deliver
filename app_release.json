@@ -1,0 +1,88 @@
+{
+  "expo": {
+    "name": "DELIVER（デリバー）配達　デリバリー・テイクアウト",
+    "slug": "delivery-delivow",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "android" : {
+      "package" : "com.delivery.delivow.jp",
+      "versionCode" : 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBXplopD94llbU1eWEjlPdonENRFC82fR0"
+        }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [{
+            "scheme": "delivowdelivery"
+          }],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "useNextNotificationsApi": true
+    },
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "delivowdelivery",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "enabled" : false
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.delivery.delivow.jp",
+      "buildNumber" : "5",
+      "config" : {
+        "googleMapsApiKey" : "AIzaSyDKnoMsrfivglgqGV875Q-emWYkIBHvBWs"
+      },
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ],
+        "NSUserNotificationAlertStyle" : "Notification",
+        "NSCameraUsageDescription" : "❝DELIVER❞から❝カメラ❞にアクセスしようとしています。これによりカメラで撮影した写真が保存できるようになります。",
+        "NSPhotoLibraryUsageDescription" : "❝DELIVER❞から❝写真❞にアクセスしようとしています。これによりライブラリの写真を保存できるようになります。",
+        "NSAllowsArbitraryLoads": true,
+        "NSLocationUsageDescription" : "DELIVERに位置情報の利用を許可しますか？あなたの場所は出勤エリアを表示するため使用されます。",
+        "NSLocationWhenInUseUsageDescription" : "DELIVERに位置情報の利用を許可しますか？あなたの場所は出勤エリアを表示するため使用されます。",
+        "NSLocationAlwaysAndWhenInUseUsageDescription" : "DELIVERに位置情報の利用を許可しますか？あなたの場所は出勤エリアを表示するため使用されます。",
+        "NSLocationAlwaysUsageDescription" : "DELIVERに位置情報の利用を許可しますか？あなたの場所は出勤エリアを表示するため使用されます。",
+        "CFBundleAllowMixedLocalizations" : true,
+        "CFBundleLocalizations" : ["ja"],
+        "CFBundleDevelopmentRegion" : "ja_JP",
+        "CFBundleDisplayName" : "DELIVER（デリバー）配達　デリバリー・テイクアウト"
+      }
+    },
+    "locales": {
+      "ja": "./japan.json"
+    },
+    "notification" : {
+      "icon": "./assets/images/push_icon.png"
+    },
+    "web": {
+      "favicon": "./assets/images/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "svg", "ts", "tsx"]
+    }
+  }
+}
